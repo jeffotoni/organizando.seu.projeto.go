@@ -75,8 +75,7 @@ Módulos públicos são armazenados em cache localmente por proxy de um GOPROXY 
 
 #### GONOSUMDB
 
-	Essa variável serve para você dizer que as suas dependências não devem ser verificadas pelo checksum.
-
+Essa variável serve para você dizer que as suas dependências não devem ser verificadas pelo checksum.
 
 
 #### GOSUMDB
