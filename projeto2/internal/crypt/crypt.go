@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/jeffotoni/organizando.seu.projeto.go/internal/fmts"
+	"github.com/jeffotoni/organizando.seu.projeto.go/projeto2/internal/fmts"
 )
 
 var SALT = "#!.*&393939393%4..48484!%38383"
