@@ -43,23 +43,15 @@ Sabemos que não tem nada tão simples assim, ao escrever um aplicativo por exem
 Em um projeto iremos ter necessidades em diversas dimensões e que teremos que utilizar diversas libs de terceiros ou construir as nossas próprias do zero.
 
 
-### Go mod
+### go mod
 
 
 #### GOPROXY
-	
-	Essa variável permite definir um Go module proxy, que basicamente vai ser uma aplicação que vai intermediar sua requisição de dependências. 
-	O valor padrão é https://proxy.golang.org mas você pode fazer uso de outros, como o JFrog por exemplo ou colocar off
 
-	Um GOPROXY controla a origem dos downloads do seu módulo Go e pode ajudar a garantir que as compilações sejam determinísticas e seguras.
+Essa variável permite definir um Go module proxy, que basicamente vai ser uma aplicação que vai intermediar sua requisição de dependências. O valor padrão é https://proxy.golang.org mas você pode fazer uso de outros, como o JFrog por exemplo ou colocar off. Um GOPROXY controla a origem dos downloads do seu módulo Go e pode ajudar a garantir que as compilações sejam determinísticas e seguras. Definir um GOPROXY para o desenvolvimento Golang ou ambiente CI redireciona as solicitações de download do módulo Go para um repositório de cache. Um GOPROXY público é um repositório centralizado disponível para desenvolvedores Golang em todo o mundo. Ele hospeda módulos Go de código aberto que foram disponibilizados por terceiros em repositórios de projetos.
 
-	Definir um GOPROXY para o desenvolvimento Golang ou ambiente CI redireciona as solicitações de download do módulo Go para um repositório de cache. 
+Além de realizar downloads, um GOPROXY público também pode fornecer aos desenvolvedores GoLang informações mais detalhadas sobre os módulos que contém. O JFrog GoCenter oferece uma interface do usuário rica com a capacidade de pesquisar e acessar informações de segurança, como CVEs , metadados não relacionados à segurança, como estatísticas de adoção e suporte gosumdb. Esses metadados ajudam os usuários a tomar melhores decisões ao selecionar um módulo Go público. Este uso de GOPRIVATE também garante que o uso desses módulos privados não "vaze" por meio de solicitações para um servidor de banco de dados público GOPROXY & checksum em uma rede aberta. Outra alternativa é usar a variável GONOSUMDB que inclui referências a módulos go privados. Embora essa configuração permita que o cliente Go resolva dependências de módulo público e privado, ela não impõe requisitos de imutabilidade ou disponibilidade para módulos privados.
 
-	Um GOPROXY público é um repositório centralizado disponível para desenvolvedores Golang em todo o mundo. Ele hospeda módulos Go de código aberto que foram disponibilizados por terceiros em repositórios de projetos.
-
-	Além de realizar downloads, um GOPROXY público também pode fornecer aos desenvolvedores GoLang informações mais detalhadas sobre os módulos que contém. O JFrog GoCenter oferece uma interface do usuário rica com a capacidade de pesquisar e acessar informações de segurança, como CVEs , metadados não relacionados à segurança, como estatísticas de adoção e suporte gosumdb. Esses metadados ajudam os usuários a tomar melhores decisões ao selecionar um módulo Go público. 
-
-	Este uso de GOPRIVATE também garante que o uso desses módulos privados não "vaze" por meio de solicitações para um servidor de banco de dados público GOPROXY & checksum em uma rede aberta. Outra alternativa é usar a variável GONOSUMDB que inclui referências a módulos go privados. Embora essa configuração permita que o cliente Go resolva dependências de módulo público e privado, ela não impõe requisitos de imutabilidade ou disponibilidade para módulos privados.
 
 #### GOPROXY privado
 
