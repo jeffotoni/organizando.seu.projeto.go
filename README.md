@@ -7,20 +7,19 @@ Vamos criar pacotes Go, vamos tentar entender um pouco quando estamos criando pr
 Tudo inicia em Go mod, o que temos que saber e como usa-lo.
 
  - go mod init 
- 	Cria um novo módulo, inicializando o go.mod
+ 	- Cria um novo módulo, inicializando o go.mod
 
  - go build
- 	Testa outros comandos de construção de pacote adicionam novas dependências go.mod conforme necessário.
+ 	- Testa outros comandos de construção de pacote adicionam novas dependências go.mod conforme necessário.
 
  - go list -m all 
- 	Imprime as dependências do módulo atual.
+ 	- Imprime as dependências do módulo atual.
 
  - go get 
- 	Altera a versão necessária de uma dependência (ou adiciona uma nova dependência).
+ 	- Altera a versão necessária de uma dependência (ou adiciona uma nova dependência).
 
  - go mod tidy 
- 	Remove dependências não utilizadas.
-
+ 	- Remove dependências não utilizadas.
 
 Tudo começa criando pacotes, entendendo como atualiza-los e como organinza-los.
 
